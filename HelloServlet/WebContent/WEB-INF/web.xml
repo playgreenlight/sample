@@ -15,6 +15,19 @@
  		<servlet-name>EchoServletEx</servlet-name>
  		<servlet-class>mypkg.EchoServlet</servlet-class>
  	</servlet>
+ 	
+ 	<servlet>
+		<servlet-name>TestInitParam</servlet-name>
+		<servlet-class>com.example.TestInitParam</servlet-class>
+    	<init-param>
+      		<param-name>Email</param-name>
+      		<param-value>ui.gyun.jeong@gmail.com</param-value>
+      	</init-param>
+      	<init-param>
+      		<param-name>company</param-name>
+      		<param-value>TmaxCloud</param-value>
+      	</init-param>
+ 	</servlet>
  
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
@@ -27,6 +40,11 @@
    <servlet-mapping>
    	<servlet-name>EchoServletEx</servlet-name>
    	<url-pattern>/echo</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+   		<servlet-name>TestInitParam</servlet-name>
+   		<url-pattern>/Tester.do</url-pattern>
    </servlet-mapping>
    
 </web-app>
